@@ -1,0 +1,13 @@
+# Unity 专用忽略
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/UserSettings/
+.idea/
+*.csproj
+*.sln
+.DS_Store
+Thumbs.db
