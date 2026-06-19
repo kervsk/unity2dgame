@@ -70,10 +70,7 @@ public class Entity : MonoBehaviour
         }
     }
     
-    public void  SetAttack()
-    {
-        statemachine.CurrentState.SetAttack();
-    }
+
     
     public void PlayerFlip()
     {

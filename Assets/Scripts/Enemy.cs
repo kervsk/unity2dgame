@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : Entity
 {
     // Start is called before the first frame update
-    public IdleState _idleState;
-    public MoveState _moveState;
+    public EnemyIdleState _idleState;
+    public EnemyMoveState _moveState;
+    
+  
 }

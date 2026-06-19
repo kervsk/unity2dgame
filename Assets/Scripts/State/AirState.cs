@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AirState : EnitityStata
+public class AirState : EnitityPlayerStata
 {
     // Start is called before the first frame update
     public AirState(StataMachine stataMachine, Player player, string animationName) : base(stataMachine, player, animationName)

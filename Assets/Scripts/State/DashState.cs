@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DashState : EnitityStata
+public class DashState : EnitityPlayerStata
 {
     // Start is called before the first frame update
     public DashState(StataMachine stataMachine, Player player, string animationName) : base(stataMachine, player, animationName)

@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class EnemyKuLou : Enemy
 {
-    // Start is called before the first frame update
+    protected override void Awake()
+    {
+        base.Awake();
+      
+        _idleState = new EnemyIdleState(statemachine,this,"Idle");
+        _moveState = new EnemyMoveState(statemachine,this,"Move");
+
+        statemachine.Init(_idleState);
+    }
    
 }

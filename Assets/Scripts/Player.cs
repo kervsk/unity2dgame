@@ -27,10 +27,11 @@ public class Player : Entity
         _WallHua = new WallHua(statemachine,this,"Wall");
         _DashState = new DashState(statemachine,this,"Dash");
         _AttackState = new AttackState(statemachine, this, "Attack");
+        statemachine.Init(_idleState);
     }
     private void Start()
     {
-        statemachine.Init(_idleState);
+       
     }
 
     protected override void Update()
@@ -60,5 +61,7 @@ public class Player : Entity
     {
         statemachine.CurrentState.SetAttack();
     }
+    
+    
 }
 

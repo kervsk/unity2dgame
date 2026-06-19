@@ -2,17 +2,17 @@
 
 public class StataMachine 
 {
-    public EnitityStata CurrentState { get;private set; }
-    public EnitityStata LastCurrstate { get;private set; }
+    public EntityState CurrentState { get;private set; }
+    public EntityState LastCurrstate { get;private set; }
 
-    public void Init(EnitityStata state)
+    public void Init(EntityState state)
     {
         CurrentState = state;
         CurrentState.Enter();
         
     }
     
-    public void ChangeState(EnitityStata newState)
+    public void ChangeState(EntityState newState)
     {
         LastCurrstate = CurrentState;
         CurrentState.Exit();
