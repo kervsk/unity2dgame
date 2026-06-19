@@ -11,7 +11,7 @@ public class BgControl : MonoBehaviour
   private float currentLong;
   private float lastLong;
     
-   void Update()
+   void FixedUpdate()
   {
       currentLong = mainCamera.transform.position.x;
       float movelong = currentLong - lastLong;
