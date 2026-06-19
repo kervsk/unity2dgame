@@ -821,11 +821,12 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 5
+  moveSpeed: 3
   jumpForce: 5
-  GroundXia: 1.1
+  GroundXia: 1.17
   GroundRight: 0.4
   move: {x: 0, y: 0}
+  emeryIsGround: 0
 --- !u!1 &875385904
 GameObject:
   m_ObjectHideFlags: 0

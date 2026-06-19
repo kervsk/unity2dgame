@@ -8,11 +8,13 @@ public class Entity : MonoBehaviour
     public Animator animator { get; private set; }
     public Rigidbody2D rb { get; private set; }
     public bool isFilp = true;
-    public bool isGround = false;
-    public bool isWall = false;
+    public bool isGround ;
+    public bool isWall ;
+    
+    
     public int ChaoXiang = 1;
     
-    [SerializeField] private LayerMask Ground;
+    [SerializeField] protected LayerMask Ground;
     
     
     [Header("moveSpeed")]
@@ -49,13 +51,13 @@ public class Entity : MonoBehaviour
 
     }
 
-    private void GroundCheck()
+    protected virtual void GroundCheck()
     {
         isGround = (Physics2D.Raycast(transform.position, Vector2.down, GroundXia, Ground));
         isWall = (Physics2D.Raycast(transform.position, Vector2.right * ChaoXiang, GroundRight, Ground));
     }
     
-    public void filp()
+    public virtual void filp()
     {
         if (move.x > 0 && isFilp==false)
         {
