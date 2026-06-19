@@ -57,10 +57,9 @@ public class Player : Entity
         DashCd -= Time.deltaTime;
     }
     
-    public void  SetAttack()
-    {
-        statemachine.CurrentState.SetAttack();
-    }
+ 
+    
+    
     
     
 }

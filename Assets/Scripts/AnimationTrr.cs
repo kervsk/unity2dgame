@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class AnimationTrr : MonoBehaviour
 {
-    public Player player;
+    public Entity Entity;
     public void Awake()
     {
-        player = GetComponentInParent<Player>();
+        Entity = GetComponentInParent<Entity>();
     }
     // Start is called before the first frame update
-  public void AttackTr()
+  public virtual void AttackTr()
   {
-      player.SetAttack();
+      Entity.SetAttack();
   }
 }

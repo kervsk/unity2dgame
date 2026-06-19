@@ -95,6 +95,11 @@ public class Entity : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + new Vector3(0, -GroundXia));
         Gizmos.DrawLine(transform.position, transform.position + new Vector3(GroundRight*ChaoXiang, 0));
     }
+    
+    public void  SetAttack()
+    {
+        statemachine.CurrentState.SetAttack();
+    }
 
    
 }

@@ -217,8 +217,9 @@ GameObject:
   m_Component:
   - component: {fileID: 244913923}
   - component: {fileID: 244913924}
+  - component: {fileID: 244913926}
   - component: {fileID: 244913925}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skeleton React_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,6 +317,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &244913926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244913922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afc9d64a96677114ab502ac12a49f149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Entity: {fileID: 646988388}
 --- !u!1 &264505788
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +729,7 @@ GameObject:
   - component: {fileID: 646988386}
   - component: {fileID: 646988385}
   - component: {fileID: 646988388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyKulou
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,6 +840,14 @@ MonoBehaviour:
   GroundXia: 1.17
   GroundRight: 0.4
   move: {x: 0, y: 0}
+  isBattle: 0
+  player: {fileID: 1904550093}
+  InBattle: 0
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  juli: 5
+  playerjuli: 1
   emeryIsGround: 0
 --- !u!1 &875385904
 GameObject:
@@ -839,7 +861,7 @@ GameObject:
   - component: {fileID: 875385907}
   - component: {fileID: 875385906}
   - component: {fileID: 875385908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player_Graphics_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -949,7 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc9d64a96677114ab502ac12a49f149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1904550092}
+  Entity: {fileID: 1904550092}
 --- !u!1 &1092361402
 GameObject:
   m_ObjectHideFlags: 0
@@ -5290,7 +5312,7 @@ GameObject:
   - component: {fileID: 1904550092}
   - component: {fileID: 1904550094}
   - component: {fileID: 1904550095}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

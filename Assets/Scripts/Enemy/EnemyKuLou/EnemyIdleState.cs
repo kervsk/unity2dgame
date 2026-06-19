@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyIdleState : EntityEnemyState
+public class EnemyIdleState : EnemyGroundState
 {
-    float a = 3f;
+    float a = 0.5f;
     public EnemyIdleState(StataMachine stataMachine, Enemy enemy, string animationName) : base(stataMachine, enemy, animationName)
     {
     }
