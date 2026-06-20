@@ -1,5 +1,7 @@
 
 
+using UnityEngine;
+
 public class EntityGround : EnitityPlayerStata
 {
     // Start is called before the first frame update
@@ -21,6 +23,16 @@ public class EntityGround : EnitityPlayerStata
         if (_player.playerInputSystem.Player.Attack.WasPerformedThisFrame())
         {
             _player.statemachine.ChangeState(_player._AttackState);
+        }
+
+        if (_player.playerInputSystem.Player.Previous.WasPerformedThisFrame())
+        {
+            _player.fanji = true;
+            if (_player.canfanji)
+            {
+                
+                _player.statemachine.ChangeState(_player._FanjiState);
+            }
         }
             
     }

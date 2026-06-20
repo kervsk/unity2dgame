@@ -24,7 +24,12 @@ public class EnemyAttackState : EntityEnemyState
            _enemy.statemachine.ChangeState(_enemy._moveState);
            
         }
+
     }
+    
+    
+    
+    
 
     public override void Exit()
     {

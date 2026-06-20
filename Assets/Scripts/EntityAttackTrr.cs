@@ -16,6 +16,13 @@ public class EntityAttackTrr : MonoBehaviour
         {
           
           VARIABLE.GetComponent<EntityHealth>().TakeDamage(Damage,gameObject);
+          if (VARIABLE.GetComponent<Player>().canfanji)
+          {
+              Debug.Log("damage");
+              Debug.Log(GetComponent<Rigidbody2D>().velocity.x);
+              this.GetComponent<Rigidbody2D>().velocity =
+                  new Vector2(-100f, GetComponent<Rigidbody2D>().velocity.y);
+          }
         }
     }
     public Collider2D[] CheckAttack()

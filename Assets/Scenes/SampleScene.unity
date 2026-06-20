@@ -326,9 +326,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 244913922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc9d64a96677114ab502ac12a49f149, type: 3}
+  m_Script: {fileID: 11500000, guid: a0b0e98931e793f4e8a72a8188c3c19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canfanji: 0
+  _player: {fileID: 1904550092}
 --- !u!1 &264505788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,9 +1018,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 875385904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afc9d64a96677114ab502ac12a49f149, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ac0f3cd6cfadd14aab3fb2eefc95a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canfanji: 0
 --- !u!1 &1080129152
 GameObject:
   m_ObjectHideFlags: 0
@@ -5714,6 +5717,8 @@ MonoBehaviour:
   GroundRight: 0.6
   move: {x: 0, y: 0}
   DashCd: 3
+  fanji: 0
+  canfanji: 0
 --- !u!4 &1904550093
 Transform:
   m_ObjectHideFlags: 0

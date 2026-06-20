@@ -15,7 +15,7 @@ public class DashState : EnitityPlayerStata
     {
         
         base.Enter();
-        dashDuring = 0.5f;
+        dashDuring = 0.3f;
         _player.DashCd = 1.5f;
         float x = _player.ChaoXiang;
         _player.rb.AddForce(new Vector2(x, 0).normalized * 10f, ForceMode2D.Impulse);

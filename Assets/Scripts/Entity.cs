@@ -12,6 +12,7 @@ public class Entity : MonoBehaviour
     public bool isWall ;
     
     
+    
     public int ChaoXiang = 1;
     
     [SerializeField] protected LayerMask Ground;
@@ -35,8 +36,9 @@ public class Entity : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>(); //初始化碰撞体
         statemachine = new StataMachine();
-      
+     
     }
+    
  
     
    
@@ -50,6 +52,8 @@ public class Entity : MonoBehaviour
 
 
     }
+    
+  
 
     protected virtual void GroundCheck()
     {

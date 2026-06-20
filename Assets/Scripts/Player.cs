@@ -7,6 +7,10 @@ public class Player : Entity, IEntity
 {
     public PlayerInputSystem playerInputSystem;
     public float DashCd = 3f;
+    public bool fanji ;
+    public bool canfanji;
+    private AnimationTrr animTrr;
+    
     
     public IdleState _idleState { get; private set; }
     public MoveState _moveState{ get; private set; }
@@ -17,6 +21,8 @@ public class Player : Entity, IEntity
     public AttackState _AttackState{ get; private set;}
     
     public DeadState _deadState{ get; private set;}
+    public FanjiState _FanjiState{ get; private set;}
+    
 
     protected override void Awake()
     {
@@ -30,8 +36,22 @@ public class Player : Entity, IEntity
         _DashState = new DashState(statemachine,this,"Dash");
         _AttackState = new AttackState(statemachine, this, "Attack");
         _deadState = new DeadState(statemachine,this,"Dead");
+        _FanjiState = new FanjiState(statemachine,this,"fanji");
         statemachine.Init(_idleState);
+        animTrr = GetComponentInChildren<AnimationTrr>();
+        
+        
     }
+
+    protected  void CounterEffect()
+    {
+       
+     
+        
+
+    }
+
+
     private void Start()
     {
        
@@ -41,6 +61,7 @@ public class Player : Entity, IEntity
     {
         base.Update();
         DashCdFun();
+        CounterEffect();
     }
 
     private void OnEnable()
@@ -62,6 +83,7 @@ public class Player : Entity, IEntity
 
     public void PlayerDead()
     {
+        
         statemachine.ChangeState(_deadState);
         playerInputSystem.Disable();
     }
