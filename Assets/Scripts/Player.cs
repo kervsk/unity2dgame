@@ -15,6 +15,8 @@ public class Player : Entity
     public WallHua _WallHua{ get; private set; }
     public DashState _DashState{ get; private set; }
     public AttackState _AttackState{ get; private set;}
+    
+    public DeadState _deadState{ get; private set;}
 
     protected override void Awake()
     {
@@ -27,6 +29,7 @@ public class Player : Entity
         _WallHua = new WallHua(statemachine,this,"Wall");
         _DashState = new DashState(statemachine,this,"Dash");
         _AttackState = new AttackState(statemachine, this, "Attack");
+        _deadState = new DeadState(statemachine,this,"Dead");
         statemachine.Init(_idleState);
     }
     private void Start()
@@ -56,7 +59,12 @@ public class Player : Entity
     {
         DashCd -= Time.deltaTime;
     }
-    
+
+    public void PlayerDead()
+    {
+        statemachine.ChangeState(_deadState);
+        playerInputSystem.Disable();
+    }
  
     
     

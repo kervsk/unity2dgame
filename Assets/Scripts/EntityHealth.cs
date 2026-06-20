@@ -13,14 +13,22 @@ public class EntityHealth : MonoBehaviour
         GetComponent<DamageMet>().ChangeColor();
         damageSource.Add(source);
         health -= damage;
-        if(health <= 0)
-        {
-            Dead();
-        }
+        EnemyDead();
     }
 
-    public virtual void Dead()
+    public virtual void EnemyDead()
     {
-        
+        if (health <= 0)
+        {
+            if (gameObject.layer == 7)
+            {
+                GetComponent<Player>().PlayerDead();
+            }
+
+            if (gameObject.layer == 8)
+            {
+                GetComponent<Enemy>().EnemyDead();
+            }
+        }
     }
 }

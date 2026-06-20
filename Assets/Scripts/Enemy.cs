@@ -8,6 +8,7 @@ public class Enemy : Entity
     public EnemyIdleState _idleState;
     public EnemyMoveState _moveState;
     public EnemyAttackState _attackState;
+    public EnemyDead _deadState;
     public bool isBattle;
     [SerializeField]
     private Transform player;
@@ -99,5 +100,11 @@ public class Enemy : Entity
             }
         }
      
+    }
+
+    public void EnemyDead()
+    {
+        statemachine.ChangeState(_deadState);
+        Destroy(gameObject, 2f);
     }
 }

@@ -11,6 +11,7 @@ public class EnemyKuLou : Enemy
         _idleState = new EnemyIdleState(statemachine,this,"Idle");
         _moveState = new EnemyMoveState(statemachine,this,"Move");
         _attackState = new EnemyAttackState(statemachine, this, "Attack");
+        _deadState = new EnemyDead(statemachine, this, "Dead");
 
         statemachine.Init(_idleState);
     }
