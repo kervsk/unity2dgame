@@ -12,7 +12,7 @@ public class EnemyIdleState : EnemyGroundState
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("dd");
+       
     }
 
     public override void UpDate()
@@ -21,7 +21,7 @@ public class EnemyIdleState : EnemyGroundState
         a -=  Time.deltaTime;
         if (a < 0)
         {
-            Debug.Log("dd");
+           
             _enemy.statemachine.ChangeState(_enemy._moveState);
             a = 3f;
         }

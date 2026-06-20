@@ -6,10 +6,11 @@ public class EntityHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] public float health ;
-    
-    public void TakeDamage(float damage)
+    [SerializeField] private List<GameObject> damageSource;
+    public void TakeDamage(float damage,GameObject source)
     {
-        Debug.Log("damage taken");
+        GetComponent<DamageMet>().ChangeColor();
+        damageSource.Add(source);
         health -= damage;
         if(health <= 0)
         {
