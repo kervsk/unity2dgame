@@ -12,7 +12,7 @@ public class AnimationtrrEmery : AnimationTrr
         
         if (_player.fanji )
         {
-            Debug.Log("fanji");
+           
             _player.canfanji = true;
         }
     }

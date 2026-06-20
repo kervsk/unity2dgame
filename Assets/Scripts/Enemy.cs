@@ -9,9 +9,11 @@ public class Enemy : Entity, IEntity
     public EnemyMoveState _moveState;
     public EnemyAttackState _attackState;
     public EnemyDead _deadState;
+    public EnemyJifeiState _jifeiState;
     public bool isBattle;
     [SerializeField]
     private Transform player;
+    public bool OneTime;
     public  float InBattle=10f;
     [SerializeField]
     private LayerMask playerMask;
@@ -102,6 +104,15 @@ public class Enemy : Entity, IEntity
         }
      
     }
+
+    public void EnemyShouji()
+    {
+        if (player.GetComponent<Player>().canfanji&&statemachine.CurrentState!=_jifeiState)
+        {
+         statemachine.ChangeState(_jifeiState);
+        }
+    }
+   
 
     public void EnemyDead()
     {

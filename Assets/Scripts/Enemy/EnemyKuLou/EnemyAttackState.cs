@@ -9,21 +9,35 @@ public class EnemyAttackState : EntityEnemyState
     {
     }
 
+   
+
     public override void Enter()
     {
         base.Enter();
         rb.velocity = Vector2.zero;
+        
     }
 
     public override void UpDate()
     {
         base.UpDate();
         rb.velocity = Vector2.zero;
+        
+        if (_enemy.OneTime==false )
+        {
+            _enemy.EnemyShouji();
+           
+
+        }
         if (isattackover)
         {
            _enemy.statemachine.ChangeState(_enemy._moveState);
            
         }
+
+       
+
+      
 
     }
     
@@ -35,5 +49,6 @@ public class EnemyAttackState : EntityEnemyState
     {
         base.Exit();
         rb.velocity = Vector2.zero;
+        _enemy.OneTime= false;
     }
 }
