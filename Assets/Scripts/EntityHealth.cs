@@ -5,6 +5,7 @@ using System;
 
 public class EntityHealth : MonoBehaviour
 {
+    [SerializeField] public float maxHealth;
     // Start is called before the first frame update
     [SerializeField] public float health ;
     [SerializeField] private List<GameObject> damageSource;
@@ -14,6 +15,7 @@ public class EntityHealth : MonoBehaviour
     private bool _isDead;
     void Awake()
     {
+        maxHealth = health;
         // 只查找一次接口，避免每次受伤GetComponent
         _entity = GetComponent<IEntity>();
     }
