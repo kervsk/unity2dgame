@@ -14,6 +14,7 @@ public class EntityAttackTrr : MonoBehaviour
     {
         foreach (var VARIABLE in CheckAttack())
         {
+          
           VARIABLE.GetComponent<EntityHealth>().TakeDamage(Damage,gameObject);
         }
     }

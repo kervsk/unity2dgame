@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Entity
+public class Enemy : Entity, IEntity
 {
     // Start is called before the first frame update
     public EnemyIdleState _idleState;
@@ -23,6 +23,7 @@ public class Enemy : Entity
     
      public bool emeryIsGround = false;
 
+     
      protected override void Update()
      {
          base.Update();
@@ -106,5 +107,16 @@ public class Enemy : Entity
     {
         statemachine.ChangeState(_deadState);
         Destroy(gameObject, 2f);
+    }
+
+    public void OnTakeDamage(GameObject source)
+    {
+     
+    }
+
+    public void OnEntityDead()
+    {
+       
+        EnemyDead();
     }
 }

@@ -101,5 +101,6 @@ public class Entity : MonoBehaviour
         statemachine.CurrentState.SetAttack();
     }
 
-   
+
+  
 }

@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 
 
-public class Player : Entity
+public class Player : Entity, IEntity
 {
     public PlayerInputSystem playerInputSystem;
     public float DashCd = 3f;
@@ -65,10 +65,16 @@ public class Player : Entity
         statemachine.ChangeState(_deadState);
         playerInputSystem.Disable();
     }
- 
-    
-    
-    
-    
+
+
+    public void OnTakeDamage(GameObject source)
+    {
+       
+    }
+
+    public void OnEntityDead()
+    {
+        PlayerDead();
+    }
 }
 
