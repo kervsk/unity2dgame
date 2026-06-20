@@ -896,7 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd45b5cd9a9da49478b9726325595781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: eff6c80f910b42142a72e7c2089afb24, type: 2}
+  hitFlashColor: {r: 0.97735846, g: 0.012908457, b: 0.012908457, a: 1}
 --- !u!1 &875385904
 GameObject:
   m_ObjectHideFlags: 0
@@ -5581,7 +5581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd45b5cd9a9da49478b9726325595781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: eff6c80f910b42142a72e7c2089afb24, type: 2}
+  hitFlashColor: {r: 0.97735846, g: 0.012908457, b: 0.012908457, a: 1}
 --- !u!1 &2099002216
 GameObject:
   m_ObjectHideFlags: 0

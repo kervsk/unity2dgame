@@ -9,6 +9,7 @@ public class EntityHealth : MonoBehaviour
     [SerializeField] private List<GameObject> damageSource;
     public void TakeDamage(float damage,GameObject source)
     {
+        
         GetComponent<DamageMet>().ChangeColor();
         damageSource.Add(source);
         health -= damage;
